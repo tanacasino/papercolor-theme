@@ -1083,6 +1083,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("scalaFqnSet", s:foreground, "", "")
   call <SID>X("scalaImport", s:purple, "", "")
   call <SID>X("scalaBoolean", s:orange, "", "")
+
+  call <SID>X("scalaSpecial", s:purple, "", "")
+  call <SID>X("scalaNameDefinition ", s:aqua, "", "")
+  call <SID>X("scalaInstanceDeclaration", s:navy, "", "")
+
   call <SID>X("scalaDef", s:pink, "", "")
   call <SID>X("scalaVal", s:purple, "", "")
   call <SID>X("scalaVar", s:purple, "", "")
@@ -1091,7 +1096,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("scalaTrait", s:purple, "", "")
   call <SID>X("scalaDefName", s:blue, "", "")
   call <SID>X("scalaValName", s:navy, "", "")
-  call <SID>X("scalaVarName", s:navy, "", "")
+  call <SID>X("scalaVarName", s:pink, "", "")
   call <SID>X("scalaClassName", s:blue, "", "")
   call <SID>X("scalaType", s:aqua, "", "")
   call <SID>X("scalaTypeSpecializer", s:aqua, "", "")
