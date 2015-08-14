@@ -1,5 +1,3 @@
-**Update July 13, 2015**: Combine PaperColor.vim and PaperColor-Dark.vim into a single PaperColor.vim. See updated usage instruction.
-
 PaperColor Theme
 ===================
 Light & Dark color schemes for **Vim** terminal editor and **gVim**
@@ -8,11 +6,11 @@ Inspired by Google's Material Design
 
 Improve code readability; great for presentation
 
-Currently designed for these languages:  C, C++, Makefile, CMake, Lex/Flex & Yacc/Bison, Bash, VimL, Golang, JavaScript, Python, Ruby, Markdown, DTrace, SystemTap, PlantUML, Haskell, Assembly (MIPS, GAS, NASM), SQL/MySQL, Octave/MATLAB, Fortran, R, PHP, Perl
+Currently designed for these languages:  C, C++, Makefile, CMake, Lex/Flex & Yacc/Bison, Bash, VimL, Golang, JavaScript, JSON, Python, Ruby, Markdown, DTrace, SystemTap, PlantUML, Haskell, Assembly (MIPS, GAS, NASM), SQL/MySQL, Octave/MATLAB, Fortran, R, PHP, Perl, LUA, Clojure, Dockerfile, NGINX, Yaml
 
 Other languages can still display well as long as your Vim is set up to recognize the language syntax even though that may not be the optimal experience. So, if the language you are working on isn't listed here, feel free to make a design request.
 
-Plugin support: Netrw, NERDTree, Tagbar, Tabline, Vimdiff, Vim-Airline
+Plugin support: vimdiff, netrw, [NERDTree](https://github.com/scrooloose/nerdtree), [tagbar](https://github.com/majutsushi/tagbar), [tabline](https://github.com/mkitt/tabline.vim), [vim-airline](https://github.com/bling/vim-airline), [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides), [vim-startify](https://github.com/mhinz/vim-startify)
 
 (see below for syntax-highlighting plugins target)
 
@@ -26,17 +24,17 @@ Or simply use a plugin manager like [Vundle](https://github.com/gmarik/Vundle.vi
 Then, put this in your `~/.vimrc`
 
 ```VimL
-    set t_Co=256   " This is may or may not needed.
+set t_Co=256   " This is may or may not needed.
 
-    set background=light
-    colorscheme PaperColor
+set background=light
+colorscheme PaperColor
 ```
 
 Or using the dark version: 
 
 ```VimL
-    set background=dark
-    colorscheme PaperColor
+set background=dark
+colorscheme PaperColor
 ```
 
 To switch to dark or light variant during session: `:set background=dark` or `:set background=light`
@@ -46,28 +44,28 @@ To quickly toggle between them, use [vim-unimpaired](https://github.com/tpope/vi
 *Optional*: turn on line numbers and status bar
 
 ```VimL
-    set number
-    set laststatus=2
+set number
+set laststatus=2
 ```
 
 ##Highlighting Customization
 Some elements have default highlighting color that may not fit everyone, and you can customize their HEX color code in your .vimrc file.
 Refer to 256-color table when choosing color.
 
-Below is an example of the most often asked.
+Example of currently available options:
 
-**CursorLine**
+```VimL
+let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a' }
 
-    let g:PaperColor_Light_CursorLine = "#dfdfff"
-
-
-*Note*: Replace `_Light_` with `_Dark_` for the dark theme.
+let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' }
+```
 
 ## Syntax Highlighting Plugins Target
 There are syntax highlighting enhancement plugins that improve upon Vim built-in syntax highlighting, and each can have many different implementations. This is the list of plugins that this color scheme targets.
 
 * C: [c-syntax.vim](https://github.com/NLKNguyen/c-syntax.vim)
 * JavaScript: [vim-javascript](https://github.com/pangloss/vim-javascript)
+* JSON: [vim-json](https://github.com/elzr/vim-json)
 * Go: [vim-go](https://github.com/fatih/vim-go)
 * DTrace: [dtrace-syntax-file](https://github.com/vim-scripts/dtrace-syntax-file)
 * SystemTap: [vim-systemtap](https://github.com/nickhutchinson/vim-systemtap)
@@ -78,6 +76,8 @@ There are syntax highlighting enhancement plugins that improve upon Vim built-in
 * Assembly GAS: [vim-gas](https://github.com/Shirk/vim-gas)
 * Octave/MATLAB: [vim-octave](https://github.com/jvirtanen/vim-octave)
 * Python: [python-syntax](https://github.com/hdima/python-syntax/)
+* Dockerfile: [dockerfile.vim](https://github.com/docker/docker/tree/master/contrib/syntax/vim)
+* NGINX: [nginx-vim-syntax](https://github.com/evanmiller/nginx-vim-syntax)
 
 
 ## Screenshots
